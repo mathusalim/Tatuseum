@@ -1,19 +1,234 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import "tw-animate-css";
+/*
+---break---*/
+@custom-variant dark (&:is(.dark *));
 
 /*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
 */
+@theme {
+  --color-wallnut: #6e6556;
+  --color-wallnut-100: #e3e0dc;
+  --color-wallnut-200: #c7c2b8;
+  --color-wallnut-300: #aca395;
+  --color-wallnut-400: #908471;
+  --color-wallnut-500: #6e6556;
+  --color-wallnut-600: #575044;
+  --color-wallnut-700: #413c33;
+  --color-wallnut-800: #2b2822;
+  --color-wallnut-900: #161411;
+
+  --color-alabaster: #eae6db;
+  --color-alabaster-100: #fbfaf8;
+  --color-alabaster-200: #f7f5f1;
+  --color-alabaster-300: #f3f0ea;
+  --color-alabaster-400: #eeebe3;
+  --color-alabaster-500: #eae6db;
+  --color-alabaster-600: #c9bea2;
+  --color-alabaster-700: #a79769;
+  --color-alabaster-800: #726643;
+  --color-alabaster-900: #393322;
+
+  --color-khaki: #aca693;
+  --color-khaki-100: #efedea;
+  --color-khaki-200: #dedcd4;
+  --color-khaki-300: #cecabf;
+  --color-khaki-400: #bdb9aa;
+  --color-khaki-500: #aca693;
+  --color-khaki-600: #918970;
+  --color-khaki-700: #6d6754;
+  --color-khaki-800: #494538;
+  --color-khaki-900: #24221c;
+
+  --color-brown: #915427;
+  --color-brown-100: #f1dbcb;
+  --color-brown-200: #e4b798;
+  --color-brown-300: #d69464;
+  --color-brown-400: #c57034;
+  --color-brown-500: #915427;
+  --color-brown-600: #74421f;
+  --color-brown-700: #573217;
+  --color-brown-800: #3a210f;
+  --color-brown-900: #1d1108;
+
+  --color-lion: #b79966;
+  --color-lion-100: #f1ebe0;
+  --color-lion-200: #e2d6c2;
+  --color-lion-300: #d4c2a3;
+  --color-lion-400: #c6ae85;
+  --color-lion-500: #b79966;
+  --color-lion-600: #9b7d49;
+  --color-lion-700: #755e37;
+  --color-lion-800: #4e3f25;
+  --color-lion-900: #271f12;
+
+  --color-indigo: #213f5e;
+  --color-indigo-100: #c6d9eb;
+  --color-indigo-200: #8eb2d7;
+  --color-indigo-300: #558cc3;
+  --color-indigo-400: #356697;
+  --color-indigo-500: #213f5e;
+  --color-indigo-600: #213f5e;
+  --color-indigo-700: #142639;
+  --color-indigo-800: #0d1926;
+  --color-indigo-900: #070d13;
+
+  --color-taupe: #3f3525;
+  --color-taupe-100: #e1d9cc;
+  --color-taupe-200: #c3b298;
+  --color-taupe-300: #a48c65;
+  --color-taupe-400: #746144;
+  --color-taupe-500: #3f3525;
+  --color-taupe-600: #332b1e;
+  --color-taupe-700: #272017;
+  --color-taupe-800: #1a160f;
+  --color-taupe-900: #0d0b08;
+
+  --color-eggshell: #edeadb;
+  --color-eggshell-100: #fbfbf8;
+  --color-eggshell-200: #f7f6f0;
+  --color-eggshell-300: #f4f2e9;
+  --color-eggshell-400: #f0ede1;
+  --color-eggshell-500: #edeadb;
+  --color-eggshell-600: #cec69d;
+  --color-eggshell-700: #afa261;
+  --color-eggshell-800: #796f3d;
+  --color-eggshell-900: #3c371e;
+}
+
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+  body {
+    min-height: 100vh;
+    font-family: "Unkempt", cursive;
+    color: var(--color-lion-200);
+    font-style: normal;
+  }
+}
+
+/*
+---break---*/
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/*
+---break---*/
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/*
+---break---*/
+
+.dark {
+  --background: var(--color-alabaster-800);
+  --foreground: var(--color-wallnut-200);
+  --card: var(--color-khaki-800);
+  --card-foreground: var(--color-khaki-200);
+  --popover: var(--color-khaki-700);
+  --popover-foreground: var(--color-khaki-200);
+  --primary: var(--color-lion-400);
+  --primary-foreground: var(--color-khaki-500);
+  --secondary: var(--color-eggshell-800);
+  --secondary-foreground: var(--color-eggshell-200);
+  --muted: var(--color-taupe-800);
+  --muted-foreground: var(--color-taupe-200);
+  --accent: var(--color-indigo-200);
+  --accent-foreground: var(--color-khaki-800);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/*
+---break---*/
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

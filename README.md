@@ -1,69 +1,84 @@
-# React + TypeScript + Vite
+1. Gallery Grid Layout – Clean & Professional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Home Page
+• Fullscreen banner image of the artist working
+• “About Me” short intro below
+• Grid of 6–8 featured diorama photos (clickable)
 
-Currently, two official plugins are available:
+Navigation
+• Home | Portfolio | Process | About | Contact
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+• Hover effect with diorama title and date
+• Lightbox-style zoom on image click
+• Optional e-commerce for selling miniatures or prints
 
-## Expanding the ESLint configuration
+⸻
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Studio Journal Layout – Warm & Personal
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Home Page
+• Hero image of the artist’s desk or tools
+• Welcome message with a handwritten-style font
+• “Latest Dioramas” section like blog posts with story snippets
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Pages
+• Dioramas (blog-style posts for each)
+• Studio Journal (behind-the-scenes)
+• About the Artist
+• Collaborate/Commission
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Design Mood
+• Earth tones, paper textures, sketchbook vibe
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⸻
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Architectural Blueprint Style – Technical & Bold
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Home Page
+• Blueprint background with animated lines drawing the diorama shapes
+• Interactive wireframe gallery
+
+Pages
+• Portfolio (sorted by theme or era)
+• Tutorials / Build Process
+• 3D Print Files (optional download shop)
+• About / CV / Press
+
+Features
+• Hover-to-reveal measurements
+• Timelapse videos embedded in project pages
+
+⸻
+
+4. Vertical Scroll Showcase – Immersive & Modern
+
+One long page
+• Each project takes up one viewport screen
+• Parallax effect as you scroll: close-up > zoom-out > sketch
+
+Sections
+• Welcome
+• Portfolio (scroll)
+• Testimonials or Artist Statement
+• Contact form / newsletter signup
+
+Design Mood
+• Neutral background, full-width images, soft transitions
+
+⸻
+
+5. Mini World Map Interface – Interactive & Playful
+
+Home Page
+• Stylized map or layout of all the diorama worlds
+• Hover over each “location” to enter that diorama’s gallery
+
+Pages
+• World Map (main navigation)
+• Diorama Pages
+• Artist Bio as an in-world character
+• Build Lab (explains techniques)
+
+Design Mood
+• Whimsical, illustrated, playful tone
